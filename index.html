@@ -39,10 +39,10 @@
       background: radial-gradient(ellipse at 50% 30%, var(--tint-light) 0%, var(--bg-outer) 70%);
       padding: 28px 20px 36px;
       transition: background 0.3s ease;
-      --accent: #C08A6E;
-      --accent-soft: rgba(192,138,110,0.14);
-      --accent-border: rgba(192,138,110,0.35);
-      --tint-light: #f6e9e2;
+      --accent: #C2740E;
+      --accent-soft: rgba(194,116,14,0.14);
+      --accent-border: rgba(194,116,14,0.4);
+      --tint-light: #f9e6c8;
       --bg-outer: #f4f1ec;
       --text-main: #3c322d;
       --text-soft: rgba(60,50,45,0.55);
@@ -54,49 +54,6 @@
       --card-border: rgba(60,50,45,0.12);
       --card-border-soft: rgba(60,50,45,0.1);
       --btn-bg: rgba(255,255,255,0.6);
-      --picker-active-border: #3c322d;
-    }
-    /* ---- palette picker ---- */
-    .palette-picker {
-      width: 100%;
-      max-width: 420px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .palette-picker p {
-      font-size: 0.6rem;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--text-faint);
-      margin-bottom: 10px;
-    }
-    .swatches {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-    }
-    .swatch {
-      position: relative;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      cursor: pointer;
-      border: 2px solid transparent;
-      transition: transform 0.15s ease, border-color 0.15s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .swatch:hover { transform: scale(1.1); }
-    .swatch.active { border-color: var(--picker-active-border); transform: scale(1.12); }
-    .swatch-num {
-      font-family: 'Jost', Arial, sans-serif;
-      font-size: 0.62rem;
-      font-weight: 600;
-      color: rgba(255,255,255,0.9);
-      text-shadow: 0 1px 2px rgba(0,0,0,0.4);
-      pointer-events: none;
     }
     .card {
       background: var(--card-glass);
@@ -248,29 +205,12 @@
 </head>
 <body>
 
-  <div class="palette-picker">
-    <p>Elige el color de acento (dime el número)</p>
-    <div class="swatches">
-      <div class="swatch active" style="background:#D4433A" data-accent="#D4433A" data-soft="rgba(212,67,58,0.14)" data-border="rgba(212,67,58,0.4)" data-tint="#fbe2e0" title="1 — Rojo coral"><span class="swatch-num">1</span></div>
-      <div class="swatch" style="background:#C2740E" data-accent="#C2740E" data-soft="rgba(194,116,14,0.14)" data-border="rgba(194,116,14,0.4)" data-tint="#f9e6c8" title="2 — Naranja quemado"><span class="swatch-num">2</span></div>
-      <div class="swatch" style="background:#2F7D5E" data-accent="#2F7D5E" data-soft="rgba(47,125,94,0.14)" data-border="rgba(47,125,94,0.4)" data-tint="#dbeee3" title="3 — Verde esmeralda"><span class="swatch-num">3</span></div>
-      <div class="swatch" style="background:#B8952E" data-accent="#B8952E" data-soft="rgba(184,149,46,0.14)" data-border="rgba(184,149,46,0.4)" data-tint="#f5ecc9" title="4 — Dorado intenso"><span class="swatch-num">4</span></div>
-      <div class="swatch" style="background:#7A3FA0" data-accent="#7A3FA0" data-soft="rgba(122,63,160,0.14)" data-border="rgba(122,63,160,0.4)" data-tint="#ecdcf5" title="5 — Morado real"><span class="swatch-num">5</span></div>
-      <div class="swatch" style="background:#1F6FA8" data-accent="#1F6FA8" data-soft="rgba(31,111,168,0.14)" data-border="rgba(31,111,168,0.4)" data-tint="#d8e9f4" title="6 — Azul cobalto"><span class="swatch-num">6</span></div>
-      <div class="swatch" style="background:#C22762" data-accent="#C22762" data-soft="rgba(194,39,98,0.14)" data-border="rgba(194,39,98,0.4)" data-tint="#f8dce7" title="7 — Magenta vino"><span class="swatch-num">7</span></div>
-      <div class="swatch" style="background:#1E5F52" data-accent="#1E5F52" data-soft="rgba(30,95,82,0.14)" data-border="rgba(30,95,82,0.4)" data-tint="#d6e8e4" title="8 — Verde botella"><span class="swatch-num">8</span></div>
-      <div class="swatch" style="background:#1B3A6B" data-accent="#1B3A6B" data-soft="rgba(27,58,107,0.14)" data-border="rgba(27,58,107,0.4)" data-tint="#dbe3f0" title="9 — Azul marino"><span class="swatch-num">9</span></div>
-      <div class="swatch" style="background:#D6247A" data-accent="#D6247A" data-soft="rgba(214,36,122,0.14)" data-border="rgba(214,36,122,0.4)" data-tint="#fbdcec" title="10 — Fucsia"><span class="swatch-num">10</span></div>
-      <div class="swatch" style="background:#8A7A1F" data-accent="#8A7A1F" data-soft="rgba(138,122,31,0.14)" data-border="rgba(138,122,31,0.4)" data-tint="#f0e9cc" title="11 — Mostaza olivo"><span class="swatch-num">11</span></div>
-    </div>
-  </div>
-
   <div class="card">
 
     <div class="top">
       <img class="logo" src="images/logo.png" alt="Natasha Lozano" />
 
-      <p class="role">Rol pendiente</p>
+      <p class="role">Especialista en Aprendizaje</p>
       <p class="tagline">Tagline pendiente</p>
     </div>
 
@@ -281,7 +221,7 @@
     <div class="contact">
 
       <a class="btn" href="https://wa.me/525554198253" target="_blank" rel="noopener noreferrer">
-        <svg class="btn-icon" viewBox="0 0 24 24" fill="#C08A6E" xmlns="http://www.w3.org/2000/svg">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="#C2740E" xmlns="http://www.w3.org/2000/svg">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
         <span class="btn-label">
@@ -291,7 +231,7 @@
       </a>
 
       <a class="btn" href="mailto:natasha.lozano@gmail.com">
-        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="#C08A6E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="#C2740E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
           <rect x="2" y="4" width="20" height="16" rx="2"/>
           <path d="M22 6l-10 7L2 6"/>
         </svg>
@@ -302,7 +242,7 @@
       </a>
 
       <button class="btn" onclick="copyClabe(this)" type="button">
-        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="#C08A6E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="#C2740E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
           <rect x="3" y="10" width="18" height="11" rx="1"/>
           <polyline points="3 10 12 3 21 10"/>
           <line x1="8" y1="14" x2="8" y2="21"/>
@@ -316,7 +256,7 @@
       </button>
 
       <button class="btn btn-save" onclick="saveContact()" type="button">
-        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="#C08A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="#C2740E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
           <path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/>
           <polyline points="17 21 17 13 7 13 7 21"/>
           <polyline points="7 3 7 8 15 8"/>
@@ -368,24 +308,6 @@
       URL.revokeObjectURL(url);
     }
 
-    var swatches = document.querySelectorAll('.swatch');
-    swatches.forEach(function(sw) {
-      sw.addEventListener('click', function() {
-        swatches.forEach(function(s) { s.classList.remove('active'); });
-        sw.classList.add('active');
-        var root = document.body.style;
-        root.setProperty('--accent', sw.dataset.accent);
-        root.setProperty('--accent-soft', sw.dataset.soft);
-        root.setProperty('--accent-border', sw.dataset.border);
-        root.setProperty('--tint-light', sw.dataset.tint);
-        document.querySelectorAll('.btn-icon[fill]').forEach(function(icon) {
-          if (icon.getAttribute('fill') !== 'none') icon.setAttribute('fill', sw.dataset.accent);
-        });
-        document.querySelectorAll('.btn-icon[stroke]').forEach(function(icon) {
-          icon.setAttribute('stroke', sw.dataset.accent);
-        });
-      });
-    });
   </script>
 
 </body>
