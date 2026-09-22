@@ -33,8 +33,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      background: radial-gradient(ellipse at 50% 30%, var(--tint-light) 0%, var(--bg-outer) 70%);
-      padding: 28px 20px 36px;
+      background: radial-gradient(ellipse at 50% 30%, var(--tint-light) 0%, var(--bg-outer) 85%);
+      padding: 32px 20px 40px;
       transition: background 0.3s ease;
       --accent: #C2740E;
       --accent-soft: rgba(194,116,14,0.14);
@@ -59,15 +59,15 @@
       color: var(--text-main);
       width: 100%;
       max-width: 420px;
-      border-radius: 8px;
+      border-radius: 14px;
       border: 1px solid var(--card-border);
       overflow: hidden;
-      box-shadow: 0 0 40px var(--accent-soft), 0 8px 40px rgba(0,0,0,0.12);
+      box-shadow: 0 0 36px var(--accent-soft), 0 10px 32px rgba(0,0,0,0.1);
       transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     }
 
     .card .top {
-      padding: 32px 32px 24px;
+      padding: 38px 32px 28px;
       text-align: center;
       background: linear-gradient(160deg, var(--card-glass-top) 0%, var(--card-glass-top2) 100%);
       border-bottom: 1px solid var(--card-border-soft);
@@ -75,47 +75,59 @@
     }
 
     .card .logo {
-      width: 280px;
+      width: 250px;
       height: auto;
-      margin: 0 auto 6px;
+      margin: 0 auto 10px;
       display: block;
+    }
+
+    .card .rule {
+      width: 32px;
+      height: 2px;
+      margin: 0 auto 14px;
+      background: var(--accent);
+      opacity: 0.5;
+      border-radius: 1px;
     }
 
     .card .role {
       font-family: 'Jost', Arial, sans-serif;
+      font-weight: 600;
       font-size: 0.66rem;
-      letter-spacing: 2.5px;
+      letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .card .tagline {
       font-family: 'Jost', Arial, sans-serif;
       font-style: italic;
+      font-weight: 500;
       font-size: 0.95rem;
       color: var(--text-main);
-      opacity: 0.8;
-      line-height: 1.4;
-      margin-bottom: 4px;
+      opacity: 0.85;
+      line-height: 1.45;
+      margin-bottom: 6px;
     }
 
     .card .sub {
       font-family: 'Jost', Arial, sans-serif;
       font-size: 0.68rem;
+      letter-spacing: 0.2px;
       color: var(--text-soft);
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .card .strip {
-      padding: 11px 20px;
+      padding: 12px 20px;
       text-align: center;
       background: var(--accent-soft);
       border-top: 1px solid var(--accent-border);
       border-bottom: 1px solid var(--accent-border);
       font-family: 'Jost', Arial, sans-serif;
       font-size: 0.65rem;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.8px;
       text-transform: uppercase;
       color: var(--accent);
       font-weight: 600;
@@ -124,31 +136,36 @@
     }
 
     .card .contact {
-      padding: 18px 24px 22px;
+      padding: 22px 24px 26px;
       display: flex;
       flex-direction: column;
-      gap: 9px;
+      gap: 12px;
       background: var(--card-glass-contact);
     }
 
     .card .btn {
       display: flex;
       align-items: center;
-      gap: 12px;
-      padding: 13px 16px;
-      border-radius: 6px;
+      gap: 14px;
+      padding: 14px 18px;
+      border-radius: 10px;
       font-family: 'Jost', Arial, sans-serif;
       font-size: 0.82rem;
-      transition: opacity 0.18s ease, transform 0.1s ease, background 0.3s ease, border-color 0.3s ease;
+      transition: opacity 0.18s ease, transform 0.1s ease, box-shadow 0.18s ease, background 0.3s ease, border-color 0.3s ease;
       background: var(--btn-bg);
       border: 1px solid var(--card-border-soft);
+      box-shadow: 0 1px 3px rgba(60,50,45,0.06);
       color: var(--text-main);
       cursor: pointer;
       width: 100%;
       text-align: left;
     }
 
-    .card .btn:hover { opacity: 0.75; transform: translateY(-1px); }
+    .card .btn:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(60,50,45,0.09);
+    }
 
     .card .btn-icon { width: 20px; height: 20px; flex-shrink: 0; }
 
@@ -188,7 +205,7 @@
       text-transform: uppercase;
     }
 
-    footer { margin-top: 20px; text-align: center; }
+    footer { margin-top: 26px; text-align: center; }
     .footer-link {
       font-size: 11px;
       font-weight: 500;
@@ -207,6 +224,7 @@
 
     <div class="top">
       <img class="logo" src="images/logo.png" alt="Natasha Lozano" />
+      <div class="rule"></div>
 
       <p class="role">Especialista en Aprendizaje</p>
       <p class="tagline">Tagline pendiente</p>
